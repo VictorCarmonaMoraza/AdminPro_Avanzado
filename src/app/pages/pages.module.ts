@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../components/components.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,7 @@ import {FormsModule } from '@angular/forms';
     FormsModule,
     SharedModule,
     RouterModule,
+    ComponentsModule
   ],
   exports:[
     ProgressComponent,
