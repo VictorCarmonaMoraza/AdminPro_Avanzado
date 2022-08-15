@@ -8,7 +8,7 @@ import { ProgressComponent } from './pages/progress/progress.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { NopagesfoundComponent } from './pages/nopagesfound/nopagesfound.component';
+import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 
 
 //Rutas de nuestra aplicacion
