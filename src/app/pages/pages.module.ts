@@ -8,7 +8,7 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { PagesComponent } from './pages.component';
 import { ProgressComponent } from './progress/progress.component';
 import {FormsModule } from '@angular/forms';
-import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { ChartsModule } from 'ng2-charts';
     SharedModule,
     RouterModule,
     ComponentsModule,
-    ChartsModule
+
   ],
   exports:[
     ProgressComponent,
