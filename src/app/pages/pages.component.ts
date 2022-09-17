@@ -1,3 +1,4 @@
+import { SettingsService } from './../services/settings.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,20 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.css']
 })
+
 export class PagesComponent implements OnInit {
 
-  public linkTheme = document.querySelector('#theme');
-
-  constructor() { }
+  constructor(private settingsService:SettingsService) { }
 
   ngOnInit(): void {
-
-    //leemos del localStorage
-    const url = localStorage.getItem('theme') || './assets/css/colors/purple-dark.css'
-
-    this.linkTheme?.setAttribute('href', url);
-
-    console.log(url);
+    //console.log(url);
   }
 
 }
