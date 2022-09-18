@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { interval, map, Observable, retry, take } from 'rxjs';
+import { filter, interval, map, Observable, retry, take } from 'rxjs';
 
 @Component({
   selector: 'app-rxjs',
@@ -31,15 +31,15 @@ export class RxjsComponent {
       .subscribe(console.log)
   }
 
-  retornaIntervalo():Observable<number> {
+  retornaIntervalo(): Observable<number> {
     //Este interval es un observable y emitira cada segundo, porque esto son milesimas de segundo
-    return interval(1000)
-            .pipe(
-              take(4),
-              map(valor => {
-                return valor + 1;
-              })
-            );
+    return interval(500)
+      .pipe(
+        map(valor => valor + 1),
+        filter(valor => (valor % 2 === 0) ? true : false),
+        take(10),
+      )
+      ;
   }
 
 
